@@ -1,0 +1,37 @@
+<html>
+<head>
+ <title>Student Registration Form</title>
+ <script>
+ function validateForm() {
+var firstName = document.forms["registrationForm"]["firstName"].value;
+ var lastName = document.forms["registrationForm"]["lastName"].value;
+ var email = document.forms["registrationForm"]["email"].value;
+ var phoneNumber = document.forms["registrationForm"]["phoneNumber"].value;
+if (firstName === "" || lastName === "" || email === "" || phoneNumber === "") {
+alert("Please fill in all fields!");
+ return false; 
+ }
+ }
+ </script>
+</head>
+<body>
+ <h1>Student Registration Form</h1>
+ <form name="registrationForm" onsubmit="return validateForm()">
+ <label for="firstName">First Name:</label>
+ <input type="text" id="firstName" name="firstName"><br><br>
+ 
+ <label for="lastName">Last Name:</label>
+ <input type="text" id="lastName" name="lastName"><br><br>
+ 
+ <label for="email">Email:</label>
+ <input type="email" id="email" name="email"><br><br>
+CMA MANUAL
+SSIBM,TUMKUR Page 7
+ 
+ <label for="phoneNumber">Phone Number:</label>
+ <input type="text" id="phoneNumber" name="phoneNumber"><br><br>
+ 
+ <input type="submit" value="Submit">
+ </form>
+</body>
+</html>
