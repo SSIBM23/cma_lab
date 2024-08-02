@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Canvas Drawing</title>
+ <style>
+ canvas {
+ border: 1px solid black;
+ }
+ </style>
+</head>
+<body>
+ <canvas id="myCanvas" width="400" height="400"></canvas>
+ <script>
+ // Get the canvas element
+ var canvas = document.getElementById("myCanvas");
+ var ctx = canvas.getContext("2d");
+ // Set the control points for the Bézier curve
+ var controlX = 200;
+ var controlY = 100;
+ var startX = 50;
+ var startY = 200;
+ var endX = 350;
+ var endY = 200;
+ // Draw the Bézier curve
+ ctx.beginPath();
+ ctx.moveTo(startX, startY);
+ ctx.quadraticCurveTo(controlX, controlY, endX, endY);
+ ctx.strokeStyle = "red";
+ ctx.lineWidth = 2;
+ ctx.stroke();
+ </script>
+</body>
+</html>

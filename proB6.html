@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Canvas Rectangle Box</title>
+ <style>
+ canvas {
+ border: 1px solid black;
+ }
+ </style>
+</head>
+<body>
+ <canvas id="myCanvas" width="400" height="400"></canvas>
+ <script>
+ // Get the canvas element
+ var canvas = document.getElementById("myCanvas");
+ var ctx = canvas.getContext("2d");
+
+ // Set initial rectangle properties
+ var rectX = 50;
+ var rectY = 50;
+ var rectWidth = 100;
+ var rectHeight = 100;
+ var isHovered = false;
+ // Draw the rectangle
+ function drawRectangle() {
+ ctx.clearRect(0, 0, canvas.width, canvas.height);
+ if (isHovered) {
+ ctx.fillStyle = "red";
+ ctx.scale(2, 2);
+ } else {
+ ctx.fillStyle = "blue";
+ ctx.scale(1, 1);
+ }
+ ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
+ }
+ // Event listeners for mouse hover events
+ canvas.addEventListener("mouseover", function() {
+ isHovered = true;
+ drawRectangle();
+ });
+ canvas.addEventListener("mouseout", function() {
+ isHovered = false;
+ drawRectangle();
+ });
+ // Initial draw of the rectangle
+ drawRectangle();
+ </script>
+</body>
+</html>

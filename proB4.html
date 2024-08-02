@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Canvas Drawing</title>
+ <style>
+ canvas {
+ border: 1px solid black;
+ }
+ </style>
+</head>
+<body>
+ <canvas id="myCanvas" width="400" height="400"></canvas>
+ <script>
+ // Get the canvas element
+ var canvas = document.getElementById("myCanvas");
+ var ctx = canvas.getContext("2d");
+ // Draw a square
+ ctx.fillStyle = "red";
+ ctx.fillRect(50, 50, 100, 100);
+ // Draw a rectangle
+ ctx.fillStyle = "blue";
+ ctx.fillRect(200, 100, 150, 80);
+ </script>
+</body>
+</html>
